@@ -68,7 +68,7 @@ export default function Form() {
           defaultOption="Select cuisine"
           name="cuisine"
           id="cuisine"
-          className="rounded-md border px-3 py-2 text-gray-800 shadow-sm focus:border-black focus:ring-1 focus:ring-black focus:outline-none"
+          primary
           value={form.cuisine}
           onChange={(e) =>
             setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
@@ -88,7 +88,7 @@ export default function Form() {
           name="maxReadyTime"
           id="maxReadyTime"
           placeholder="e.g., 30"
-          className="rounded-md border px-3 py-2 text-gray-800 shadow-sm focus:border-black focus:ring-1 focus:ring-black focus:outline-none"
+          primary
           value={form.maxReadyTime}
           onChange={(e) =>
             setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
