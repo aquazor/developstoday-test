@@ -1,6 +1,8 @@
-import { Recipe, RecipeDetails } from '@/app/types/recipes.types';
+import { Recipe, RecipeDetails } from '@/types/recipes.types';
 
 async function fetchRecipeById(id: string) {
+  await new Promise((resolve) => setTimeout(resolve, 500));
+
   const url = `https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.SPOONACULAR_API_KEY}`;
   const res = await fetch(url, {
     next: { revalidate: 60 },
@@ -13,6 +15,8 @@ async function fetchRecipeById(id: string) {
 }
 
 async function fetchRecipes(params: URLSearchParams) {
+  await new Promise((resolve) => setTimeout(resolve, 500));
+
   const url = `https://api.spoonacular.com/recipes/complexSearch?${params.toString()}&apiKey=${process.env.SPOONACULAR_API_KEY}`;
   const res = await fetch(url, {
     next: { revalidate: 60 },
