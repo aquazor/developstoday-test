@@ -9,8 +9,8 @@ A modern, fast, and responsive Recipes application built with **Next.js 15**, **
 ### 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/your-recipe-app.git
-cd your-recipe-app
+git clone https://github.com/aquazor/developstoday-test.git
+cd developstoday-test
 ```
 
 ### 2. Install dependencies:
